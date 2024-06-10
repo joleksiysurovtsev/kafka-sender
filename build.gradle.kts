@@ -28,6 +28,16 @@ dependencies {
 	providedRuntime("org.springframework.boot:spring-boot-starter-tomcat")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("org.springframework.kafka:spring-kafka-test")
+
+	// Добавить зависимости Springdoc
+	implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.1.0")
+
+	// Add this dependency for javax.servlet
+	providedRuntime("javax.servlet:javax.servlet-api:4.0.1")
+
+	// Корутинные зависимости
+	implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2")
+	implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor:1.5.2")
 }
 
 tasks.withType<KotlinCompile> {
